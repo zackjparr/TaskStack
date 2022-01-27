@@ -1,0 +1,20 @@
+<h2>Update {{task.briefDesc}}</h2>
+
+<p>Team Member Name:</p>
+<input type="text" id="TMName{{Id}}" value="{{task.tmName}}" />
+
+<br>
+<p>Brief Description:</p>
+<input type="text" id="BriefDesc{{Id}}" value="{{task.briefDesc}}" />
+<br>
+<p>Due Date:</p>
+<input type="date" id="DueDate{{Id}}" value="{{task.dueDate}}" />
+
+<p>Is Completed?</p>
+<select name="Completed" id="IsCompleted{{Id}}" value="{{task.isCompleted}}">
+    <option value="false" selected>false</option>
+    <option value="true">true</option>
+</select>
+<br>
+
+<button (click)="UpdateTask(task.id)">Update</button>
